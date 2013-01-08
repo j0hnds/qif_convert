@@ -3,7 +3,9 @@ class IncomeExpenseLine
   MATCH_RE = /^([EI])$/
 
   def self.match(line)
-    line =~ MATCH_RE
+    if line =~ MATCH_RE
+      $1
+    end
   end
 
 end

@@ -33,7 +33,6 @@ class BankRecord
   end
 
   def self.create_record(file)
-    puts "Reading line: #{file.peek_next_line}"
     date = DateLine.match file.gets
     raise "Expecting a date line" if date.nil?
 
